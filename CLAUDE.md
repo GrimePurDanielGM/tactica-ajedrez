@@ -19,6 +19,7 @@ App personal de Daniel (usuario no programador; TODO en español: conversación,
 - GitHub Pages por GitHub Actions (`.github/workflows/deploy.yml`): cada push a `main` compila y publica. Repo público `GrimePurDanielGM/tactica-ajedrez` → URL https://grimepurdanielgm.github.io/tactica-ajedrez/ (HTTPS = requisito de iOS para que la PWA funcione offline).
 - Instalación en el iPhone: abrir la URL en Safari → Compartir → "Añadir a pantalla de inicio". Las actualizaciones llegan solas (`registerType: 'autoUpdate'`) al reabrir la app.
 - gh CLI autenticado como GrimePurDanielGM. OJO: el clasificador de permisos del modo auto de Claude Code bloquea `gh repo create` (crear una superficie pública): ese paso lo ejecuta Daniel a mano.
+- Pages se activó el 25/09/2026 con `gh api -X POST repos/GrimePurDanielGM/tactica-ajedrez/pages -f build_type=workflow` (el GITHUB_TOKEN del workflow NO puede crear el sitio: `configure-pages` con `enablement: true` falla con "Resource not accessible by integration"). Con el sitio ya creado, el workflow normal basta.
 
 ## Lecciones
 - `scripts/e2e.mjs` traía rutas absolutas del contenedor Linux original; ahora importa `playwright` del proyecto y guarda capturas en `e2e-shots/` (ignorado).
