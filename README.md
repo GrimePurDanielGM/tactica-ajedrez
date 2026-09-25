@@ -16,13 +16,16 @@ Todo se guarda **en el propio iPhone** (IndexedDB). Exporta/importa el progreso 
 
 ## Instalar en el iPhone
 
-La app necesita servirse por **HTTPS** para funcionar offline (requisito de iOS para PWAs). Opciones, de más a menos recomendable:
+La app necesita servirse por **HTTPS** para funcionar offline (requisito de iOS para PWAs).
 
-### A) Hosting estático gratuito (recomendado)
-1. `npm install && npm run build` → se genera la carpeta `dist/`.
-2. Sube `dist/` a Netlify Drop (arrastrar y soltar), Cloudflare Pages, Vercel o GitHub Pages.
-3. Abre la URL en Safari del iPhone → botón Compartir → **Añadir a pantalla de inicio**.
-4. A partir de ahí funciona sin conexión y a pantalla completa.
+### A) GitHub Pages (la forma normal)
+El repositorio `GrimePurDanielGM/tactica-ajedrez` publica automáticamente cada `push` a `main` mediante GitHub Actions (`.github/workflows/deploy.yml`) en:
+
+**https://grimepurdanielgm.github.io/tactica-ajedrez/**
+
+1. Abre esa URL en Safari del iPhone.
+2. Botón Compartir → **Añadir a pantalla de inicio**.
+3. A partir de ahí funciona sin conexión y a pantalla completa. Las actualizaciones se instalan solas al reabrir la app.
 
 ### B) Servida desde el Mac en la red local
 ```bash

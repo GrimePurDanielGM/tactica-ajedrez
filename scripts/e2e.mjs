@@ -1,5 +1,5 @@
-import { chromium, devices } from '/home/claude/.npm-global/lib/node_modules/playwright/index.mjs'
-const shots = '/tmp/claude-0/-home-claude/e2de96d3-2f46-5dc1-8b49-44c8036612ee/scratchpad/shots'
+import { chromium, devices } from 'playwright'
+const shots = new URL('../e2e-shots/', import.meta.url).pathname
 import fs from 'fs'; fs.mkdirSync(shots, { recursive: true })
 const browser = await chromium.launch()
 const ctx = await browser.newContext({ ...devices['iPhone 14 Pro'] })
