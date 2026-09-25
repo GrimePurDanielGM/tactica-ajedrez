@@ -28,4 +28,5 @@ App personal de Daniel (usuario no programador; TODO en español: conversación,
 
 ## Estado
 - v1 completa y verificada en el navegador interno el 25/09/2026: puzzles (acierto → XP/Elo/repaso programado), finales contra Stockfish (worker + wasm cargan y responden), aperturas, progreso.
+- PUBLICADA el 25/09/2026 en https://grimepurdanielgm.github.io/tactica-ajedrez/ (workflow en verde) y verificada en la URL pública: página, manifest, service worker activado con el ámbito correcto (modo offline OK en HTTPS), ficheros del motor servidos. Pendiente de Daniel: añadirla a la pantalla de inicio del iPhone.
 - Pendiente v2 (ver README): posiciones críticas de medio juego, sincronización entre dispositivos, más líneas y drills.
